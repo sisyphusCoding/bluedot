@@ -2,6 +2,9 @@ import './style.sass'
 
 import gsap from 'gsap'
 
+
+import earthIMG from './img/earth.jpg'
+
 import * as THREE from 'three'
 
 import vS from './shaders/vertex.glsl'
@@ -81,11 +84,11 @@ const sphere = new THREE.Mesh(
 
     uniforms: {
       globeTexture: {
-        value: new THREE.TextureLoader().load('./img/earth.jpg')
+        value: new THREE.TextureLoader().load(earthIMG) 
       }
     }
 
-    //map:  new THREE.TextureLoader().load('./img/earth.jpg')
+    //map:  new THREE.TextureLoader().load()('./img/earth.jpg')
 
       })
 
