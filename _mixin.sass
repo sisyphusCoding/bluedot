@@ -1,0 +1,71 @@
+$cubic: cubic-bezier(.5,2,0,1)
+
+$cubicb: cubic-bezier(.5,.8,0,-1)
+
+$red: 	hsl(342, 79%, 41%)
+
+$white : 	hsl(40, 25%, 83%)
+
+$grun: #50D890
+
+$h1 :5vh
+
+
+
+@mixin fromBase($a,$j,$ff)
+	@media screen and (min-width: 1px) 
+		@includeflex($a,$j,$ff)
+		
+
+
+
+
+@mixin fromTab($a,$j,$ff)
+	@media screen and (min-width: 501px) 
+		@includeflex($a,$j,$ff)
+		
+
+
+
+	
+
+@mixin fromDesktop($a,$j,$ff)
+	@media screen and (min-width: 1001px) 
+		@includeflex($a,$j,$ff)
+		
+
+
+@mixin animate($name ,$x ,$y)	
+	@keyframes #{$name}
+		from
+			transform: translate3d($x + vh,$y + vh,0)
+			opacity: 0
+			clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)
+		to
+			transform: translate3d(0,0,0)
+			opacity: 1
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+
+
+
+
+
+@mixin clear
+	padding: 0
+	margin: 0
+	list-style: none	
+
+
+@mixin blur($i)
+		backdrop-filter: blur($i + vh)
+		-webkit-backdrop-filter: blur($i + vh)
+
+@mixin flex($align-items, $justify-content , $flex-flow , )
+		display: flex
+		align-items: $align-items
+		justify-content: $justify-content 
+		flex-flow: $flex-flow
+			
+
+
+

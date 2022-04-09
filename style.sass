@@ -1,0 +1,29 @@
+@import '_mixin'
+
+*
+    box-sizing: border-box
+    -webkit-touch-callout: none
+    -webkit-tap-highlight-color: transparent
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale
+
+body
+    min-height: 100vh
+    @include flex(center,center,row)  
+    height: 100vh
+    min-width: 100vw
+    width: 100vw  
+    overflow: hidden
+    padding: 0
+    margin: 0
+
+
+canvas
+    padding: 0
+    margin: 0 
+    @include flex(center,center,row)
+    width: 100vw
+    height: 100vh
+    background-color: #000
+
+    
